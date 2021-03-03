@@ -1,0 +1,2 @@
+(this["webpackJsonpmy-react-model"]=this["webpackJsonpmy-react-model"]||[]).push([[0],{10:function(e,t,c){},12:function(e,t,c){"use strict";c.r(t);var n=c(1),r=c.n(n),i=c(3),o=c.n(i),s=(c(9),c(10),c(0));var a=function(){return Object(s.jsx)("div",{className:"App",children:Object(s.jsx)("h1",{children:"Rick and Morty"})})};o.a.render(Object(s.jsx)(r.a.StrictMode,{children:Object(s.jsx)(a,{})}),document.getElementById("root"))},9:function(e,t,c){}},[[12,1,2]]]);
+//# sourceMappingURL=main.04aa3cd9.chunk.js.map
