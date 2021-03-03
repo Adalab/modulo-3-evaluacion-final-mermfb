@@ -1,0 +1,20 @@
+.name {
+  border-top: solid 2px grey;
+  border-bottom: solid 2px grey;
+  padding: 5px;
+}
+.typesList {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+}
+.type {
+  padding: 2px 5px;
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  margin: 5px;
+}
