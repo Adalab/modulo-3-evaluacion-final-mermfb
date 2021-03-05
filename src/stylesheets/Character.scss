@@ -19,4 +19,9 @@
     max-width: 140px;
     text-align: center;
   }
+  &__text {
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
