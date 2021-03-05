@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "../stylesheets/Character.scss";
 
 const Character = (props) => {
-  console.log(props);
   return (
     <li key={props.character.id}>
       <img

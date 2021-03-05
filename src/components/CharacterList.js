@@ -3,9 +3,8 @@ import "../stylesheets/CharacterList.scss";
 import Character from "./Character";
 
 function CharacterList(props) {
-  console.log(props.characters);
-  const characterItems = props.characters.map((character) => {
-    return <Character character={character} />;
+  const characterItems = props.filteredCharacters.map((character) => {
+    return <Character character={character} key={character.id} />;
   });
 
   return (
