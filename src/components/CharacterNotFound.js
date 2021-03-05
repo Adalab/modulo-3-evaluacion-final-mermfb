@@ -1,6 +1,7 @@
+import "../stylesheets/CharacterList.scss";
 function CharacterNotFound() {
   return (
-    <div>
+    <section className="notFound">
       <h2>¿A quién dices que buscas?</h2>
       <section>
         <p>
@@ -8,7 +9,7 @@ function CharacterNotFound() {
           Universo C-137
         </p>
       </section>
-    </div>
+    </section>
   );
 }
 

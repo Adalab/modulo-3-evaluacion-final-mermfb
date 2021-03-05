@@ -1,0 +1,20 @@
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(57, 235, 137, 0.6);
+  border-radius: 5%;
+  margin: auto;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  color: white;
+
+  &__img {
+    width: 90%;
+    border-radius: 5%;
+    padding: 5px;
+  }
+}

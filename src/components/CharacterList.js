@@ -12,8 +12,8 @@ function CharacterList(props) {
     return <CharacterNotFound />;
   } else {
     return (
-      <section>
-        <ul>{characterItems}</ul>
+      <section className="CharacterSection">
+        <ul className="CharacterList">{characterItems}</ul>
       </section>
     );
   }

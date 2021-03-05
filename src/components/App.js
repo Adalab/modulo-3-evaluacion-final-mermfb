@@ -5,6 +5,7 @@ import getData from "../services/Api";
 import CharacterList from "./CharacterList";
 import Filter from "./Filter";
 import CharacterInfo from "./CharacterInfo";
+import logo from "../images/Rick_and_Morty_-_logo_(English).png";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -47,7 +48,12 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <h1>Rick and Morty</h1>
+          <img
+            src={logo}
+            title="Rick and Morty logo"
+            alt="Rick and Morty logo"
+            className="logo"
+          />
           <Filter handleFilter={handleFilter} filter={filter} />
           <CharacterList
             filteredCharacters={filteredCharacters}
