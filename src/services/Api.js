@@ -9,6 +9,8 @@ const getData = () => {
           name: character.name,
           specie: character.species,
           planet: character.location.name,
+          episode: character.episode,
+          status: character.status,
         };
       });
     });
