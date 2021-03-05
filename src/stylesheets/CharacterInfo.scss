@@ -1,26 +1,23 @@
-.name {
-  border-top: solid 2px grey;
-  border-bottom: solid 2px grey;
-  padding: 5px;
-}
-.typesList {
-  list-style: none;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  font-weight: bold;
+.characterInfo {
   display: flex;
   flex-direction: row;
-}
-.type {
-  padding: 2px 5px;
-  background-color: gray;
-  color: white;
-  border-radius: 5px;
-  margin: 5px;
-}
-.characterInfo {
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 50px;
   background-color: rgba(59, 226, 190, 0.6);
   color: white;
-  height: 100%;
-  width: 40%;
+  margin: 150px 0 150px 0;
+  &__img {
+    padding-right: 10px;
+    border-radius: 50px;
+  }
+  &__text {
+    margin: 60px 5px 80px 5px;
+    height: 140px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 200px;
+  }
 }

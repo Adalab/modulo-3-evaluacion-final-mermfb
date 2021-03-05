@@ -46,22 +46,24 @@ function App() {
 
   return (
     <div className="App">
-      <Switch>
-        <Route exact path="/">
-          <img
-            src={logo}
-            title="Rick and Morty logo"
-            alt="Rick and Morty logo"
-            className="logo"
-          />
-          <Filter handleFilter={handleFilter} filter={filter} />
-          <CharacterList
-            filteredCharacters={filteredCharacters}
-            render={renderCharacterInfo}
-          ></CharacterList>
-        </Route>
-        <Route path="/character/:characterId" render={renderCharacterInfo} />
-      </Switch>
+      <div className="wrapper">
+        <Switch>
+          <Route exact path="/">
+            <img
+              src={logo}
+              title="Rick and Morty logo"
+              alt="Rick and Morty logo"
+              className="logo"
+            />
+            <Filter handleFilter={handleFilter} filter={filter} />
+            <CharacterList
+              filteredCharacters={filteredCharacters}
+              render={renderCharacterInfo}
+            ></CharacterList>
+          </Route>
+          <Route path="/character/:characterId" render={renderCharacterInfo} />
+        </Switch>
+      </div>
     </div>
   );
 }

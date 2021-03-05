@@ -15,13 +15,22 @@
 }
 .notFound {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   height: 60vh;
-  width: 100%;
+  width: 800px;
   background-image: url("../images/background.gif");
   background-position: center;
   background-repeat: no-repeat;
   color: white;
+
+  &__title {
+    max-width: 100px;
+    margin-left: 160px;
+  }
+  &__text {
+    max-width: 230px;
+    margin-left: 110px;
+  }
 }

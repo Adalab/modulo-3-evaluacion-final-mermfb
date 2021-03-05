@@ -11,18 +11,25 @@ function CharacterInfo(props) {
     return <CharacterNotFound />;
   } else {
     return (
-      <div className="characterInfo">
-        <h2>{props.character.name}</h2>
-        <section>
-          <img src={props.character.image} alt={props.character.name} />
-          <ul>
-            <li>Especie: {props.character.specie}</li>
-            <li>Planeta: {props.character.planet}</li>
-            <li>Estado: {props.character.status}</li>
-            <li>Episodios: {props.character.episode.length}</li>
-          </ul>
-        </section>
-      </div>
+      <>
+        <Link to="/"> Volver </Link>
+        <div className="characterInfo">
+          <img
+            className="characterInfo__img"
+            src={props.character.image}
+            alt={props.character.name}
+          />
+          <section className="characterInfo__text">
+            <h2>{props.character.name}</h2>
+            <ul>
+              <li>Especie: {props.character.specie}</li>
+              <li>Planeta: {props.character.planet}</li>
+              <li>Estado: {props.character.status}</li>
+              <li>Episodios: {props.character.episode.length}</li>
+            </ul>
+          </section>
+        </div>
+      </>
     );
   }
 }

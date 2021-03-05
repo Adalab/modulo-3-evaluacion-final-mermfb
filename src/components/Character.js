@@ -12,7 +12,7 @@ const Character = (props) => {
           alt={`Foto de ${props.character.name}`}
           className="card__img"
         />
-        <h3>{props.character.name}</h3>
+        <h3 className="card__name">{props.character.name}</h3>
         <p>{props.character.specie}</p>
       </li>
     </Link>
