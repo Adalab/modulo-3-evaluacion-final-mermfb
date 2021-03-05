@@ -48,7 +48,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <h1>Rick and Morty</h1>
-          <Filter handleFilter={handleFilter} />
+          <Filter handleFilter={handleFilter} filter={filter} />
           <CharacterList
             filteredCharacters={filteredCharacters}
           ></CharacterList>

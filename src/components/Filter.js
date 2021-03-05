@@ -6,11 +6,23 @@ const Filter = (props) => {
       value: ev.target.value,
       key: "character",
     });
+    console.log(props);
   };
+
+  const handleForm = (ev) => {
+    ev.preventDefault();
+  };
+
   return (
-    <form>
+    <form onChange={handleForm}>
       <label htmlFor="name">Encuentra al personaje:</label>
-      <input type="text" name="name" id="name" onChange={handleChange} />
+      <input
+        type="text"
+        name="name"
+        id="name"
+        value={props.filter}
+        onChange={handleChange}
+      />
     </form>
   );
 };

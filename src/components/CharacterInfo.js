@@ -5,6 +5,7 @@ import "../stylesheets/CharacterInfo.scss";
 function CharacterInfo(props) {
   console.log(props);
   console.log(props.character);
+
   if (props.character === undefined) {
     return (
       <div>
