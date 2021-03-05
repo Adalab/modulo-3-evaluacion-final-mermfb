@@ -11,7 +11,7 @@ const Character = (props) => {
         alt={`Foto de ${props.character.name}`}
       />
       <h3>{props.character.name}</h3>
-      <p>{props.character.species}</p>
+      <p>{props.character.specie}</p>
     </li>
   );
 };
