@@ -1,23 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/CharacterInfo.scss";
+import CharacterNotFound from "./CharacterNotFound";
 
 function CharacterInfo(props) {
   console.log(props);
   console.log(props.character);
 
   if (props.character === undefined) {
-    return (
-      <div>
-        <h2>¿A quién dices que buscas?</h2>
-        <section>
-          <p>
-            No encuentro un personaje con ese nombre en todo el Planeta Tierra
-            del Universo C-137
-          </p>
-        </section>
-      </div>
-    );
+    return <CharacterNotFound />;
   } else {
     return (
       <div className="characterInfo">

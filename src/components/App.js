@@ -51,6 +51,7 @@ function App() {
           <Filter handleFilter={handleFilter} filter={filter} />
           <CharacterList
             filteredCharacters={filteredCharacters}
+            render={renderCharacterInfo}
           ></CharacterList>
         </Route>
         <Route path="/character/:characterId" render={renderCharacterInfo} />
