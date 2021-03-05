@@ -8,7 +8,7 @@ function CharacterInfo(props) {
   if (props.character === undefined) {
     return (
       <div>
-        <h2>¿A quién buscas?</h2>
+        <h2>¿A quién dices que buscas?</h2>
         <section>
           <p>
             No encuentro un personaje con ese nombre en todo el Planeta Tierra
@@ -25,6 +25,7 @@ function CharacterInfo(props) {
           <img src={props.character.image} alt={props.character.name} />
           <ul>
             <li>Especie: {props.character.specie}</li>
+            <li>Planeta: {props.character.planet}</li>
             <li>Estado: {props.character.status}</li>
             <li>Episodios: {props.character.episode.length}</li>
           </ul>
