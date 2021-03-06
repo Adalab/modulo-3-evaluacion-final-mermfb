@@ -38,11 +38,11 @@ function App() {
         ? true
         : character.specie === filter.specie;
     });
-  if (filter.sort === "No") {
+  if (filter.sort === "Sí") {
     characters.sort((a, b) => {
       return a.id - b.id;
     });
-  } else if (filter.sort === "Sí") {
+  } else if (filter.sort === "No") {
     characters.sort((a, b) => {
       if (!filter.sort) {
         return 0;
