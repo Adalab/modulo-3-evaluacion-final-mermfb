@@ -5,7 +5,8 @@ import getData from "../services/Api";
 import CharacterList from "./CharacterList";
 import Filter from "./Filter";
 import CharacterInfo from "./CharacterInfo";
-import logo from "../images/Rick_and_Morty_-_logo_(English).png";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -71,19 +72,20 @@ function App() {
       <div className="wrapper">
         <Switch>
           <Route exact path="/">
-            <img
-              src={logo}
-              title="Rick and Morty logo"
-              alt="Rick and Morty logo"
-              className="logo"
-            />
-            <Filter handleFilter={handleFilter} filter={filter} />
-            <CharacterList
-              filteredCharacters={filteredCharacters}
-              render={renderCharacterInfo}
-            ></CharacterList>
+            <Header />
+            <main>
+              <Filter handleFilter={handleFilter} filter={filter} />
+              <CharacterList
+                filteredCharacters={filteredCharacters}
+                render={renderCharacterInfo}
+              ></CharacterList>
+            </main>
+            <Footer />
           </Route>
-          <Route path="/character/:characterId" render={renderCharacterInfo} />
+          <Route
+            path="/character/:characterId"
+            render={renderCharacterInfo}
+          ></Route>
         </Switch>
       </div>
     </div>
