@@ -76,7 +76,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Header />
-            <main>
+            <main className="main">
               <Filter handleFilter={handleFilter} filter={filter} />
               <CharacterList
                 filteredCharacters={filteredCharacters}

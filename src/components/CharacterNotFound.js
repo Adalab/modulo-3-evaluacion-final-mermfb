@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function CharacterNotFound() {
   return (
     <div className="notFound-wrapper">
-      <Link to="/" className="comeback">
+      <Link to="/" className="notFound-wrapper__comeback">
         <i className="fas fa-rocket icon"></i>
         Volver
       </Link>
