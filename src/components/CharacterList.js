@@ -4,6 +4,7 @@ import Character from "./Character";
 import CharacterNotFound from "./CharacterNotFound";
 
 function CharacterList(props) {
+  console.log(props);
   const characterItems = props.filteredCharacters.map((character) => {
     return <Character character={character} key={character.id} />;
   });

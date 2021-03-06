@@ -19,6 +19,24 @@ function App() {
     getData().then((data) => setCharacters(data));
   }, []);
 
+  //ORDER
+
+  Array.prototype.orderByString = function (property, sortOrder) {
+    if (sortOrder != -1 && sortOrder != 1) sortOrder = 1;
+    this.sort(function (a, b) {
+      var stringA = a[property],
+        stringB = b[property];
+      // Si un valor es null o undefined, se convierte a cadena vacía.
+      if (stringA == null) stringA = "";
+      if (stringB == null) stringB = "";
+      // Si ignoreCase es true, se convierten ambas variables a minúsculas.
+      var res = 0;
+      if (stringA < stringB) res = -1;
+      else if (stringA > stringB) res = 1;
+      return res * sortOrder;
+    });
+  };
+
   //FILTER
   const handleFilter = (value, key) => {
     console.log(value, key);
@@ -27,15 +45,6 @@ function App() {
       [key]: value,
     });
   };
-  // const handleFilter = (data) => {
-  //   console.log(data);
-  //   if (data.key === "character") {
-  //     setFilter(data.value);
-  //   }
-  //   if (data.key === "specie") {
-  //     setFilter(data.value);
-  //   }
-  // };
 
   const filteredCharacters = characters
     .filter((character) => {
@@ -46,9 +55,10 @@ function App() {
         ? true
         : character.specie === filter.specie;
     });
+  filteredCharacters.orderByString("name");
+  console.log("FILTRADOS", filteredCharacters);
 
   //CHARACTER INFO
-
   const renderCharacterInfo = (props) => {
     //console.log(props);
     let characterId = props.match.params.characterId;
