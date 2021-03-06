@@ -11,8 +11,11 @@ function CharacterInfo(props) {
     return <CharacterNotFound />;
   } else {
     return (
-      <>
-        <Link to="/"> Volver </Link>
+      <div className="characterInfo-wrapper">
+        <Link to="/" className="comeback">
+          <i className="fas fa-rocket icon"></i>
+          Volver
+        </Link>
         <div className="characterInfo">
           <img
             className="characterInfo__img"
@@ -29,7 +32,7 @@ function CharacterInfo(props) {
             </ul>
           </section>
         </div>
-      </>
+      </div>
     );
   }
 }

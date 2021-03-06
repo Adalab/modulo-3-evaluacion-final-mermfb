@@ -16,13 +16,13 @@ const Character = (props) => {
       <li key={props.character.id} className="card">
         <img
           src={props.character.image}
-          title={`Foto de ${props.character.name}`}
-          alt={`Foto de ${props.character.name}`}
+          title={`Imagen de ${props.character.name}`}
+          alt={`Imagen de ${props.character.name}`}
           className="card__img"
         />
         <h3 className="card__name">{props.character.name}</h3>
         <div className="card__text">
-          <i class={status}></i>
+          <i className={status}></i>
           <p>{props.character.specie}</p>
         </div>
       </li>

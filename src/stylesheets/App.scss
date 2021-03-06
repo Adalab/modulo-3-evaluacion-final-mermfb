@@ -10,7 +10,11 @@
   width: 100%;
   padding: 20px;
   background: url("../images/estrellas-galaxia-fondo-cielo-espacio-exterior_146539-2211.jpg");
+  //background-size: contain;
   background-repeat: repeat;
+  @media (max-width: 768px) {
+    width: 100vw;
+  }
 }
 .wrapper {
   height: 100%;
@@ -23,7 +27,6 @@
 }
 .logo {
   margin: 20px 0;
-  width: 30%;
   animation-name: zoomInOut;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
@@ -49,6 +52,31 @@
     to {
       margin-left: 0%;
       width: 30%;
+    }
+  }
+  @media (max-width: 768px) {
+    @keyframes zoomInOut {
+      from {
+        margin-right: 0%;
+        width: 70%;
+      }
+
+      25% {
+        margin-right: 5%;
+        width: 60%;
+      }
+      50% {
+        margin-right: 0%;
+        width: 70%;
+      }
+      75% {
+        margin-left: 5%;
+        width: 80%;
+      }
+      to {
+        margin-left: 0%;
+        width: 70%;
+      }
     }
   }
 }
