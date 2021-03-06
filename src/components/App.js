@@ -24,13 +24,9 @@ function App() {
   Array.prototype.orderByString = function (property, sortOrder) {
     if (sortOrder != -1 && sortOrder != 1) sortOrder = 1;
     this.sort(function (a, b) {
-      var stringA = a[property],
+      const stringA = a[property],
         stringB = b[property];
-      // Si un valor es null o undefined, se convierte a cadena vacía.
-      if (stringA == null) stringA = "";
-      if (stringB == null) stringB = "";
-      // Si ignoreCase es true, se convierten ambas variables a minúsculas.
-      var res = 0;
+      let res = 0;
       if (stringA < stringB) res = -1;
       else if (stringA > stringB) res = 1;
       return res * sortOrder;
@@ -56,11 +52,9 @@ function App() {
         : character.specie === filter.specie;
     });
   filteredCharacters.orderByString("name");
-  console.log("FILTRADOS", filteredCharacters);
 
   //CHARACTER INFO
   const renderCharacterInfo = (props) => {
-    //console.log(props);
     let characterId = props.match.params.characterId;
     const foundCharacter = characters.find((character) => {
       const characterIdApi = character.id.toString();
