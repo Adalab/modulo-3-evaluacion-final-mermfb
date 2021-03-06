@@ -4,11 +4,9 @@ import "../stylesheets/CharacterInfo.scss";
 import CharacterNotFound from "./CharacterNotFound";
 import Header from "./Header";
 import Footer from "./Footer";
+import PropTypes from "prop-types";
 
 function CharacterInfo(props) {
-  console.log(props);
-  console.log(props.character);
-
   if (props.character === undefined) {
     return <CharacterNotFound />;
   } else {
@@ -44,3 +42,15 @@ function CharacterInfo(props) {
 }
 
 export default CharacterInfo;
+
+CharacterInfo.propTypes = {
+  character: PropTypes.shape({
+    episode: PropTypes.array,
+    id: PropTypes.number,
+    image: PropTypes.string,
+    name: PropTypes.string,
+    planet: PropTypes.string,
+    specie: PropTypes.string,
+    status: PropTypes.string,
+  }),
+};

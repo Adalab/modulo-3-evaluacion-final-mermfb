@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../stylesheets/Filter.scss";
+import PropTypes from "prop-types";
 
 const Filter = (props) => {
-  console.log(props);
-
   const handleChange = (ev) => {
     props.handleFilter(ev.target.value, ev.target.name);
   };
@@ -59,3 +58,11 @@ const Filter = (props) => {
 };
 
 export default Filter;
+
+Filter.propTypes = {
+  filter: PropTypes.shape({
+    name: PropTypes.string,
+    sort: PropTypes.string,
+    specie: PropTypes.string,
+  }),
+};

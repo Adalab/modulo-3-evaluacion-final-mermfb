@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../stylesheets/Character.scss";
 import { Link, Route, Switch } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Character = (props) => {
   let status = props.character.status;
@@ -31,3 +32,15 @@ const Character = (props) => {
 };
 
 export default Character;
+
+Character.propTypes = {
+  character: PropTypes.shape({
+    episode: PropTypes.array,
+    id: PropTypes.number,
+    image: PropTypes.string,
+    name: PropTypes.string,
+    planet: PropTypes.string,
+    specie: PropTypes.string,
+    status: PropTypes.string,
+  }),
+};

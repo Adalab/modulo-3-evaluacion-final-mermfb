@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import "../stylesheets/CharacterList.scss";
 import Character from "./Character";
 import CharacterNotFound from "./CharacterNotFound";
+import PropTypes from "prop-types";
 
 function CharacterList(props) {
-  console.log(props);
   const characterItems = props.filteredCharacters.map((character) => {
     return <Character character={character} key={character.id} />;
   });
-  console.log("CHARACTERITEMS", characterItems);
   if (characterItems.length === 0) {
     return <CharacterNotFound />;
   } else {
@@ -21,3 +20,17 @@ function CharacterList(props) {
 }
 
 export default CharacterList;
+
+CharacterList.propTypes = {
+  filteredCharacters: PropTypes.arrayOf(
+    PropTypes.shape({
+      episode: PropTypes.array,
+      id: PropTypes.number,
+      image: PropTypes.string,
+      name: PropTypes.string,
+      planet: PropTypes.string,
+      specie: PropTypes.string,
+      status: PropTypes.string,
+    })
+  ),
+};

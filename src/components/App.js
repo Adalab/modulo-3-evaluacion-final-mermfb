@@ -23,7 +23,6 @@ function App() {
 
   //FILTER
   const handleFilter = (value, key) => {
-    console.log(value, key);
     setFilter({
       ...filter,
       [key]: value,
@@ -62,8 +61,6 @@ function App() {
     let characterId = props.match.params.characterId;
     const foundCharacter = characters.find((character) => {
       const characterIdApi = character.id.toString();
-      //console.log("characterID", characterId);
-      //console.log("characterIdApi", characterIdApi);
       return characterIdApi === characterId;
     });
 
