@@ -13,7 +13,16 @@
   row-gap: 30px;
   list-style: none;
   overflow-x: scroll;
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
+}
+
+.CharacterList::-webkit-scrollbar {
+  display: none;
+}
+.CharacterList {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
