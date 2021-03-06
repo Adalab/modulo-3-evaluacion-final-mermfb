@@ -15,7 +15,7 @@ const Filter = (props) => {
   return (
     <form onChange={handleForm} className="form">
       <label htmlFor="name" className="form__label">
-        Encuentra al personaje:
+        Encuentra al personaje
       </label>
       <input
         type="text"
@@ -26,7 +26,7 @@ const Filter = (props) => {
         className="form__input"
       />
       <label htmlFor="specie" className="form__label">
-        Busca por especie:
+        Busca por especie
       </label>
       <select
         type="text"
@@ -39,6 +39,20 @@ const Filter = (props) => {
         <option>Todas</option>
         <option>Human</option>
         <option>Alien</option>
+      </select>
+      <label htmlFor="name" className="form__label">
+        Ordena alfabeticamente
+      </label>
+      <select
+        type="text"
+        name="sort"
+        id="sort"
+        value={props.filter.sort}
+        onChange={handleChange}
+        className="form__input"
+      >
+        <option>No</option>
+        <option>Sí</option>
       </select>
     </form>
   );

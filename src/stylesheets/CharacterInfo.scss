@@ -1,11 +1,13 @@
 .characterInfo-wrapper {
-  height: 100vh;
   //background-image: url("../images/estrellas-galaxia-fondo-cielo-espacio-exterior_146539-2211.jpg");
   background-repeat: repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 20px;
+  margin: 20px 0 50px 0;
+  @media (max-width: 768px) {
+    margin-bottom: 100px;
+  }
 }
 .characterInfo {
   display: flex;

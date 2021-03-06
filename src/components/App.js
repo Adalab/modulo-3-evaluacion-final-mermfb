@@ -13,26 +13,13 @@ function App() {
   const [filter, setFilter] = useState({
     name: "",
     specie: "Todas",
+    sort: "No",
   });
 
   //API
   useEffect(() => {
     getData().then((data) => setCharacters(data));
   }, []);
-
-  //ORDER
-
-  Array.prototype.orderByString = function (property, sortOrder) {
-    if (sortOrder != -1 && sortOrder != 1) sortOrder = 1;
-    this.sort(function (a, b) {
-      const stringA = a[property],
-        stringB = b[property];
-      let res = 0;
-      if (stringA < stringB) res = -1;
-      else if (stringA > stringB) res = 1;
-      return res * sortOrder;
-    });
-  };
 
   //FILTER
   const handleFilter = (value, key) => {
@@ -52,7 +39,23 @@ function App() {
         ? true
         : character.specie === filter.specie;
     });
-  filteredCharacters.orderByString("name");
+  if (filter.sort === "No") {
+    characters.sort((a, b) => {
+      return a.id - b.id;
+    });
+  } else if (filter.sort === "Sí") {
+    characters.sort((a, b) => {
+      if (!filter.sort) {
+        return 0;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      if (a.name < b.name) {
+        return -1;
+      }
+    });
+  }
 
   //CHARACTER INFO
   const renderCharacterInfo = (props) => {

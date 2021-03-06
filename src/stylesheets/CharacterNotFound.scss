@@ -1,9 +1,11 @@
 .notFound-wrapper {
   height: 90vh;
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   padding-top: 15px;
+  background-image: url("../images/background.gif");
+  background-position: top;
+  background-repeat: no-repeat;
 }
 .notFound {
   display: flex;
@@ -12,29 +14,37 @@
   padding-top: 50px;
   justify-content: space-around;
   height: 65%;
-  width: 800px;
-  background-image: url("../images/background.gif");
-  background-position: top;
-  background-repeat: no-repeat;
+  width: 100%;
   color: white;
   @media (max-width: 768px) {
-    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   &__title {
     max-width: 100px;
+    @media (max-width: 768px) {
+      text-align: center;
+      margin: 20px 20px 0 0;
+    }
   }
   &__text {
     max-width: 200px;
+    @media (max-width: 768px) {
+      text-align: center;
+      margin: 80px 40px 0 0;
+    }
   }
 
   &__error {
+    text-align: center;
     font-size: 30px;
     margin-left: 100px;
     margin-top: 70px;
-    color: black;
+    color: white;
     @media (max-width: 768px) {
-      margin: 0;
+      margin: 10px 30px 0 0;
     }
   }
 }
