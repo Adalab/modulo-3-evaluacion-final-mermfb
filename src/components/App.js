@@ -9,7 +9,10 @@ import logo from "../images/Rick_and_Morty_-_logo_(English).png";
 
 function App() {
   const [characters, setCharacters] = useState([]);
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState({
+    name: "",
+    specie: "Todas",
+  });
 
   //API
   useEffect(() => {
@@ -17,17 +20,32 @@ function App() {
   }, []);
 
   //FILTER
-
-  const handleFilter = (data) => {
-    console.log(data);
-    if (data.key === "character") {
-      setFilter(data.value);
-    }
+  const handleFilter = (value, key) => {
+    console.log(value, key);
+    setFilter({
+      ...filter,
+      [key]: value,
+    });
   };
+  // const handleFilter = (data) => {
+  //   console.log(data);
+  //   if (data.key === "character") {
+  //     setFilter(data.value);
+  //   }
+  //   if (data.key === "specie") {
+  //     setFilter(data.value);
+  //   }
+  // };
 
-  const filteredCharacters = characters.filter((character) => {
-    return character.name.toUpperCase().includes(filter.toUpperCase());
-  });
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toUpperCase().includes(filter.name.toUpperCase());
+    })
+    .filter((character) => {
+      return filter.specie === "Todas"
+        ? true
+        : character.specie === filter.specie;
+    });
 
   //CHARACTER INFO
 

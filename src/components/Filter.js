@@ -2,12 +2,10 @@ import React, { useState, useEffect } from "react";
 import "../stylesheets/Filter.scss";
 
 const Filter = (props) => {
+  console.log(props);
+
   const handleChange = (ev) => {
-    props.handleFilter({
-      value: ev.target.value,
-      key: "character",
-    });
-    console.log(props);
+    props.handleFilter(ev.target.value, ev.target.name);
   };
 
   const handleForm = (ev) => {
@@ -23,10 +21,25 @@ const Filter = (props) => {
         type="text"
         name="name"
         id="name"
-        value={props.filter}
+        value={props.filter.name}
         onChange={handleChange}
         className="form__input"
       />
+      <label htmlFor="specie" className="form__label">
+        Busca por especie:
+      </label>
+      <select
+        type="text"
+        name="specie"
+        id="specie"
+        value={props.filter.specie}
+        onChange={handleChange}
+        className="form__input"
+      >
+        <option>Todas</option>
+        <option>Human</option>
+        <option>Alien</option>
+      </select>
     </form>
   );
 };
