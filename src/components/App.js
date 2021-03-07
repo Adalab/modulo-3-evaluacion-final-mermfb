@@ -38,21 +38,13 @@ function App() {
         ? true
         : character.specie === filter.specie;
     });
-  if (filter.sort === "Sí") {
+  if (filter.sort === "No") {
     characters.sort((a, b) => {
-      return a.id - b.id;
+      return a.id < b.id ? -1 : 1;
     });
-  } else if (filter.sort === "No") {
+  } else if (filter.sort === "Sí") {
     characters.sort((a, b) => {
-      if (!filter.sort) {
-        return 0;
-      }
-      if (a.name > b.name) {
-        return 1;
-      }
-      if (a.name < b.name) {
-        return -1;
-      }
+      return a.name < b.name ? -1 : 1;
     });
   }
 

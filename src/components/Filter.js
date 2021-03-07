@@ -39,7 +39,7 @@ const Filter = (props) => {
         <option>Human</option>
         <option>Alien</option>
       </select>
-      <label htmlFor="name" className="form__label">
+      <label htmlFor="sort" className="form__label">
         Ordena alfabeticamente
       </label>
       <select
