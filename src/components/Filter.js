@@ -20,6 +20,7 @@ const Filter = (props) => {
         type="text"
         name="name"
         id="name"
+        placeholder="Escribe su nombre..."
         value={props.filter.name}
         onChange={handleChange}
         className="form__input"
