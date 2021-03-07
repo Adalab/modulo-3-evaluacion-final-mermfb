@@ -8,15 +8,13 @@ function CharacterList(props) {
   const characterItems = props.filteredCharacters.map((character) => {
     return <Character character={character} key={character.id} />;
   });
-  if (characterItems.length === 0) {
-    return <CharacterNotFound />;
-  } else {
-    return (
-      <section className="CharacterSection">
-        <ul className="CharacterList">{characterItems}</ul>
-      </section>
-    );
-  }
+  return characterItems.length === 0 ? (
+    <CharacterNotFound />
+  ) : (
+    <section className="CharacterSection">
+      <ul className="CharacterList">{characterItems}</ul>
+    </section>
+  );
 }
 
 export default CharacterList;

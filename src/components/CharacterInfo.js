@@ -7,38 +7,39 @@ import Footer from "./Footer";
 import PropTypes from "prop-types";
 
 function CharacterInfo(props) {
-  if (props.character === undefined) {
-    return <CharacterNotFound />;
-  } else {
-    return (
-      <>
-        <Header></Header>
-        <div className="characterInfo-wrapper">
-          <Link to="/" className="comeback">
-            <i className="fas fa-rocket icon"></i>
-            Volver
-          </Link>
-          <div className="characterInfo">
-            <img
-              className="characterInfo__img"
-              src={props.character.image}
-              alt={props.character.name}
-            />
-            <section className="characterInfo__text">
-              <h2>{props.character.name}</h2>
-              <ul>
-                <li>Especie: {props.character.specie}</li>
-                <li>Planeta: {props.character.planet}</li>
-                <li>Estado: {props.character.status}</li>
-                <li>Episodios: {props.character.episode.length}</li>
-              </ul>
-            </section>
-          </div>
+  return props.character === undefined ? (
+    <>
+      <Header></Header>
+      <CharacterNotFound />
+    </>
+  ) : (
+    <>
+      <Header></Header>
+      <div className="characterInfo-wrapper">
+        <Link to="/" className="comeback">
+          <i className="fas fa-rocket icon"></i>
+          Volver
+        </Link>
+        <div className="characterInfo">
+          <img
+            className="characterInfo__img"
+            src={props.character.image}
+            alt={props.character.name}
+          />
+          <section className="characterInfo__text">
+            <h2>{props.character.name}</h2>
+            <ul>
+              <li>Especie: {props.character.specie}</li>
+              <li>Planeta: {props.character.planet}</li>
+              <li>Estado: {props.character.status}</li>
+              <li>Episodios: {props.character.episode.length}</li>
+            </ul>
+          </section>
         </div>
-        <Footer />
-      </>
-    );
-  }
+      </div>
+      <Footer />
+    </>
+  );
 }
 
 export default CharacterInfo;

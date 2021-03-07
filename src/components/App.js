@@ -37,16 +37,16 @@ function App() {
       return filter.specie === "Todas"
         ? true
         : character.specie === filter.specie;
+    })
+    .sort((a, b) => {
+      return filter.sort === "No"
+        ? a.id < b.id
+          ? -1
+          : 1
+        : a.name < b.name
+        ? -1
+        : 1;
     });
-  if (filter.sort === "No") {
-    characters.sort((a, b) => {
-      return a.id < b.id ? -1 : 1;
-    });
-  } else if (filter.sort === "Sí") {
-    characters.sort((a, b) => {
-      return a.name < b.name ? -1 : 1;
-    });
-  }
 
   //CHARACTER INFO
   const renderCharacterInfo = (props) => {
