@@ -10,7 +10,13 @@ function CharacterInfo(props) {
   return props.character === undefined ? (
     <>
       <Header></Header>
+      <Link to="/" className="comeback">
+        <i className="fas fa-rocket icon"></i>
+        Volver
+      </Link>
+
       <CharacterNotFound />
+      <Footer />
     </>
   ) : (
     <>
