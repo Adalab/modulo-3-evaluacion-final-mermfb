@@ -11,6 +11,5 @@ Para crearla se ha trabajado con tecnología Node y Gulp. Con Git y Github Pages
 
 ## Página web
 
-Podrás visitar la página en http://beta.adalab.es/modulo-3-evaluacion-final-mermfb/.
-
+Podrás visitar la página en https://mermfb.github.io/rick-and-morty-browser/#/ .
 ## Wubba Lubba Dub Dub!!
